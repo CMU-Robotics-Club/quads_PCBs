@@ -26,7 +26,7 @@ interface uses the ODrive CAN protocol in
 [torque control](https://github.com/CMU-Robotics-Club/Laika-Software/blob/dd9dcf645790c05628127b254bd854ea58fc05dc/laika_ws/src/laika_hardware_interface/hardware/laika_hardware_interface.cpp#L61).
 
 - Bus: currently **classic CAN, 1 Mbps**
-  ([Laika-Software](https://github.com/CMU-Robotics-Club/Laika-Software/blob/dd9dcf645790c05628127b254bd854ea58fc05dc/laika_ws/src/laika_hardware_interface/hardware/laika_hardware_interface.cpp#L80)).
+  ([Laika-Software](https://github.com/CMU-Robotics-Club/Laika-Software/blob/dd9dcf645790c05628127b254bd854ea58fc05dc/laika_ws/src/laika_hardware_interface/odrive_base/src/socket_can.cpp#L106)).
   **Does the final motor driver support CAN-FD?** If so, the bus-load limit
   below largely goes away.
 
