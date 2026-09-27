@@ -25,10 +25,10 @@ are powered from the battery directly, not through this board's regulators).
 interface uses the ODrive CAN protocol in
 [torque control](https://github.com/CMU-Robotics-Club/Laika-Software/blob/dd9dcf645790c05628127b254bd854ea58fc05dc/laika_ws/src/laika_hardware_interface/hardware/laika_hardware_interface.cpp#L61).
 
-- Bus: **classic CAN, 1 Mbps**. Not CAN-FD — no FD frames may be sent on a
-  bus with these motors. *(Verify against the AK80-8 manual.)*
-- Each control cycle: at least 1 command frame + 1 reply frame per motor
-  (exact count depends on the protocol).
+- Bus: currently **classic CAN, 1 Mbps**
+  ([Laika-Software](https://github.com/CMU-Robotics-Club/Laika-Software/blob/dd9dcf645790c05628127b254bd854ea58fc05dc/laika_ws/src/laika_hardware_interface/hardware/laika_hardware_interface.cpp#L80)).
+  **Does the final motor driver support CAN-FD?** If so, the bus-load limit
+  below largely goes away.
 
 ## CAN bus plan
 
