@@ -1,7 +1,6 @@
 # Mainboard architecture
 
-Status: **draft** — decisions below are proposals until the open questions
-are closed.
+Status: **draft**.
 
 ## Scope
 
@@ -57,15 +56,3 @@ far end at the last motor).
 
 USB Full-Speed (CDC). Latency jitter must be measured before committing to
 rates above 500 Hz. Fallback: SPI or UART from the Jetson 40-pin header.
-
-## Open questions
-
-- [ ] Battery voltage (sets regulator choice and connector ratings)
-- [ ] H723 package: LQFP144 (ZG, same as Nucleo) or smaller (e.g. LQFP100)
-- [ ] CAN transceiver part (3.3 V logic, ≥ 1 Mbps)
-- [ ] IMU part and SPI port
-- [ ] E-stop behavior: MCU input only, or also hardware cut of motor power
-- [ ] Confirm AK80-8 has no internal 120 Ω termination
-- [ ] Connector types for CAN, USB, power, E-stop
-- [ ] Board size / mounting holes (from the mechanical team)
-- [ ] Motor mounting locations (affects CAN cable routing for joint-type grouping)

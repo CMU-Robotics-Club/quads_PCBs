@@ -29,5 +29,4 @@ Jetson Orin Nano
 └───────────────────────────────────────────────┘
 ```
 
-See [docs/architecture.md](docs/architecture.md) for the interface spec and
-open questions.
+See [docs/architecture.md](docs/architecture.md) for the interface spec.
