@@ -7,7 +7,8 @@ Status: **draft**.
 The mainboard replaces the Nucleo-H723ZG and breakout modules with one PCB:
 
 - STM32H723 MCU
-- 3 CAN buses to the motors (on-chip FDCAN1–3)
+- 3 CAN buses to the motors (on-chip FDCAN1–3), with CAN-FD capable
+  transceivers (≥ 5 Mbps)
 - USB to the Jetson Orin Nano
 - IMU
 - E-stop / power switch input
@@ -19,11 +20,14 @@ straight from the battery.
 ## Motors
 
 - 12× CubeMars AK80-8 KV30 motors, 3 per leg
-- Each motor has an ODrive driver
+- Each motor has an ODrive S1 driver
 - Protocol: ODrive CAN, classic CAN frames
   ([code](https://github.com/CMU-Robotics-Club/Laika-Software/blob/dd9dcf645790c05628127b254bd854ea58fc05dc/laika_ws/src/laika_hardware_interface/odrive_base/src/socket_can.cpp#L106)),
   1 Mbps
   ([code](https://github.com/CMU-Robotics-Club/Laika-Software/blob/dd9dcf645790c05628127b254bd854ea58fc05dc/laika_ws/src/laika_hardware_interface/hardware/laika_hardware_interface.cpp#L80))
+- ODrive S1 supports CAN-FD from firmware 0.6.10
+  ([ODrive docs](https://docs.odriverobotics.com/v/latest/hardware/odrive-comparison.html)).
+  Laika-Software currently uses classic CAN.
 
 ## Control rate
 
