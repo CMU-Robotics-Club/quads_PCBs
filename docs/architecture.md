@@ -4,31 +4,40 @@ Status: **draft**.
 
 ## Scope
 
-The mainboard integrates what is currently a Nucleo-H723ZG plus breakout
-modules into one PCB:
+The mainboard replaces the Nucleo-H723ZG and breakout modules with one PCB:
 
 - STM32H723 MCU
-- 3 CAN buses to the motors (on-chip FDCAN1–3, grouped by joint type)
+- 3 CAN buses to the motors (on-chip FDCAN1–3)
 - USB to the Jetson Orin Nano
 - IMU
 - E-stop / power switch input
-- Power: battery → 5 V / 3.3 V
+- Power: its own supply from the battery (5 V / 3.3 V), not from the Jetson
 
-Out of scope: the motors, the Jetson, and motor power distribution (motors
-are powered from the battery directly, not through this board's regulators).
+Not on this board: the motors, the Jetson, and motor power. Motors get power
+straight from the battery.
 
 ## Motors
 
-12× CubeMars (T-Motor) AK80-8 KV30, 3 per leg.
+- 12× CubeMars AK80-8 KV30 motors, 3 per leg
+- Each motor has an ODrive driver
+- Protocol: ODrive CAN, classic CAN frames
+  ([code](https://github.com/CMU-Robotics-Club/Laika-Software/blob/dd9dcf645790c05628127b254bd854ea58fc05dc/laika_ws/src/laika_hardware_interface/odrive_base/src/socket_can.cpp#L106)),
+  1 Mbps
+  ([code](https://github.com/CMU-Robotics-Club/Laika-Software/blob/dd9dcf645790c05628127b254bd854ea58fc05dc/laika_ws/src/laika_hardware_interface/hardware/laika_hardware_interface.cpp#L80))
 
-**Driver/protocol not confirmed.** The current [Laika-Software](https://github.com/CMU-Robotics-Club/Laika-Software) hardware
-interface uses the ODrive CAN protocol in
-[torque control](https://github.com/CMU-Robotics-Club/Laika-Software/blob/dd9dcf645790c05628127b254bd854ea58fc05dc/laika_ws/src/laika_hardware_interface/hardware/laika_hardware_interface.cpp#L61).
+## Control rate
 
-- Bus: currently **classic CAN, 1 Mbps**
-  ([Laika-Software](https://github.com/CMU-Robotics-Club/Laika-Software/blob/dd9dcf645790c05628127b254bd854ea58fc05dc/laika_ws/src/laika_hardware_interface/odrive_base/src/socket_can.cpp#L106)).
-  **Does the final motor driver support CAN-FD?** If so, the bus-load limit
-  below largely goes away.
+**1 kHz.** [Laika-Software](https://github.com/CMU-Robotics-Club/Laika-Software)
+runs its controllers at
+[`update_rate: 1000`](https://github.com/CMU-Robotics-Club/Laika-Software/blob/dd9dcf645790c05628127b254bd854ea58fc05dc/laika_ws/src/laika_pid_controller/config/real_leg_pid_controller_config.yaml#L3).
+
+Every cycle, the host sends 3 frames to each motor:
+
+1. [`Set_Input_Torque`](https://github.com/CMU-Robotics-Club/Laika-Software/blob/dd9dcf645790c05628127b254bd854ea58fc05dc/laika_ws/src/laika_hardware_interface/hardware/laika_hardware_interface.cpp#L287): the torque command
+2. [`Get_Torques`](https://github.com/CMU-Robotics-Club/Laika-Software/blob/dd9dcf645790c05628127b254bd854ea58fc05dc/laika_ws/src/laika_hardware_interface/hardware/laika_hardware_interface.cpp#L251): a request, the driver replies with torque data
+3. [`Get_Encoder_Estimates`](https://github.com/CMU-Robotics-Club/Laika-Software/blob/dd9dcf645790c05628127b254bd854ea58fc05dc/laika_ws/src/laika_hardware_interface/hardware/laika_hardware_interface.cpp#L252): a request, the driver replies with position and velocity
+
+So each motor uses 5 frames per cycle: 3 from the host and 2 replies.
 
 ## CAN bus plan
 
@@ -36,26 +45,13 @@ Grouped by joint type, 4 motors per bus:
 
 | Bus | Controller | Motors |
 |---|---|---|
-| CAN1 | FDCAN1 (on-chip, classic mode) | 4× hip ab/ad (one per leg) |
-| CAN2 | FDCAN2 (on-chip, classic mode) | 4× hip pitch / thigh |
-| CAN3 | FDCAN3 (on-chip, classic mode) | 4× knee |
+| CAN1 | FDCAN1 | 4× hip ab/ad (one per leg) |
+| CAN2 | FDCAN2 | 4× thigh |
+| CAN3 | FDCAN3 | 4× knee |
 
-Bus load: a classic 8-byte frame at 1 Mbps takes roughly 130 µs (estimate
-incl. bit stuffing). Per bus, assuming 2 frames per motor: 4 motors × 2 = 8
-frames per cycle, ≈ 1.04 ms. At 1 kHz (1 ms per cycle) that is ≈ 104 % bus
-load, so it does not fit.
-
-Target control rate: **1 kHz**. [Laika-Software](https://github.com/CMU-Robotics-Club/Laika-Software) runs its controllers at
-[`update_rate: 1000`](https://github.com/CMU-Robotics-Club/Laika-Software/blob/dd9dcf645790c05628127b254bd854ea58fc05dc/laika_ws/src/laika_pid_controller/config/real_leg_pid_controller_config.yaml#L3)
-with the [PID loop on the host](https://github.com/CMU-Robotics-Club/Laika-Software/blob/dd9dcf645790c05628127b254bd854ea58fc05dc/laika_ws/src/laika_pid_controller/controller/laika_pid_controller.cpp#L102-L106),
-[sending torque commands](https://github.com/CMU-Robotics-Club/Laika-Software/blob/dd9dcf645790c05628127b254bd854ea58fc05dc/laika_ws/src/laika_hardware_interface/hardware/laika_hardware_interface.cpp#L273-L275)
-every cycle.
-
-Wiring: each bus is a daisy chain through its 4 motors (no star/stub
-topology), with a 120 Ω termination at both ends (board end on this PCB,
-far end at the last motor).
+Wiring: each bus runs from motor to motor in a chain, with a 120 Ω resistor
+at both ends (one on this board, one at the last motor).
 
 ## Jetson link
 
-USB Full-Speed (CDC). Latency jitter must be measured to confirm it supports
-1 kHz. Fallback: SPI or UART from the Jetson 40-pin header.
+USB Full-Speed.
