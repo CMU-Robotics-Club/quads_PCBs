@@ -1,4 +1,4 @@
-# Laika-Hardware
+# quads_PCBs
 
 PCB designs for Laika, the CMU Robotics Club quadruped. Software lives in
 [Laika-Software](https://github.com/CMU-Robotics-Club/Laika-Software).
