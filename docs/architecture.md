@@ -34,10 +34,8 @@ runs its controllers at
 Every cycle, the host sends 3 frames to each motor:
 
 1. [`Set_Input_Torque`](https://github.com/CMU-Robotics-Club/Laika-Software/blob/dd9dcf645790c05628127b254bd854ea58fc05dc/laika_ws/src/laika_hardware_interface/hardware/laika_hardware_interface.cpp#L287): the torque command
-2. [`Get_Torques`](https://github.com/CMU-Robotics-Club/Laika-Software/blob/dd9dcf645790c05628127b254bd854ea58fc05dc/laika_ws/src/laika_hardware_interface/hardware/laika_hardware_interface.cpp#L251): a request, the driver replies with torque data
-3. [`Get_Encoder_Estimates`](https://github.com/CMU-Robotics-Club/Laika-Software/blob/dd9dcf645790c05628127b254bd854ea58fc05dc/laika_ws/src/laika_hardware_interface/hardware/laika_hardware_interface.cpp#L252): a request, the driver replies with position and velocity
-
-So each motor uses 5 frames per cycle: 3 from the host and 2 replies.
+2. [`Get_Torques`](https://github.com/CMU-Robotics-Club/Laika-Software/blob/dd9dcf645790c05628127b254bd854ea58fc05dc/laika_ws/src/laika_hardware_interface/hardware/laika_hardware_interface.cpp#L251): a request for torque data
+3. [`Get_Encoder_Estimates`](https://github.com/CMU-Robotics-Club/Laika-Software/blob/dd9dcf645790c05628127b254bd854ea58fc05dc/laika_ws/src/laika_hardware_interface/hardware/laika_hardware_interface.cpp#L252): a request for position and velocity
 
 ## CAN bus plan
 
