@@ -19,7 +19,11 @@ are powered from the battery directly, not through this board's regulators).
 
 ## Motors
 
-12× CubeMars (T-Motor) AK80-8 KV30, 3 per leg, driven in MIT mode.
+12× CubeMars (T-Motor) AK80-8 KV30, 3 per leg.
+
+**Driver/protocol not confirmed.** The bus plan below assumes CubeMars MIT
+mode, but the current Laika-Software hardware interface uses the ODrive CAN
+protocol (torque control, more frames per motor per cycle).
 
 - Bus: **classic CAN, 1 Mbps**. Not CAN-FD — no FD frames may be sent on a
   bus with these motors. *(Verify against the AK80-8 manual.)*
@@ -43,8 +47,12 @@ incl. bit stuffing). Per bus, 4 motors × 2 frames = 8 frames per cycle.
 | 500 Hz | ≈ 52 % |
 | 1 kHz | ≈ 104 % (impossible) |
 
-Target control rate: **500 Hz**. This is enough because the AK80-8 runs
-the PD loop internally in MIT mode; the bus only updates the targets.
+Target control rate: **1 kHz**. Laika-Software runs its controllers at
+`update_rate: 1000` with the PID loop on the host, sending torque commands
+every cycle.
+
+**The 3-bus plan above does not meet 1 kHz.** Bus plan is pending the final
+motor/driver choice.
 
 Wiring: each bus is a daisy chain through its 4 motors (no star/stub
 topology), with a 120 Ω termination at both ends (board end on this PCB,
@@ -52,5 +60,5 @@ far end at the last motor).
 
 ## Jetson link
 
-USB Full-Speed (CDC). Latency jitter must be measured before committing to
-rates above 500 Hz. Fallback: SPI or UART from the Jetson 40-pin header.
+USB Full-Speed (CDC). Latency jitter must be measured to confirm it supports
+1 kHz. Fallback: SPI or UART from the Jetson 40-pin header.
