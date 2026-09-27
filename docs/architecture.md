@@ -51,9 +51,6 @@ with the [PID loop on the host](https://github.com/CMU-Robotics-Club/Laika-Softw
 [sending torque commands](https://github.com/CMU-Robotics-Club/Laika-Software/blob/dd9dcf645790c05628127b254bd854ea58fc05dc/laika_ws/src/laika_hardware_interface/hardware/laika_hardware_interface.cpp#L273-L275)
 every cycle.
 
-**The 3-bus plan above does not meet 1 kHz.** Bus plan is pending the final
-motor/driver choice.
-
 Wiring: each bus is a daisy chain through its 4 motors (no star/stub
 topology), with a 120 Ω termination at both ends (board end on this PCB,
 far end at the last motor).
