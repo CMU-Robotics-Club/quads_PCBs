@@ -8,8 +8,7 @@ The mainboard integrates what is currently a Nucleo-H723ZG plus breakout
 modules into one PCB:
 
 - STM32H723 MCU
-- 3 CAN buses to the motors (grouped by joint type), plus a footprint for a
-  4th (MCP2518FD, not populated in v1)
+- 3 CAN buses to the motors (on-chip FDCAN1–3, grouped by joint type)
 - USB to the Jetson Orin Nano
 - IMU
 - E-stop / power switch input
@@ -35,7 +34,6 @@ Grouped by joint type, 4 motors per bus:
 | CAN1 | FDCAN1 (on-chip, classic mode) | 4× hip ab/ad (one per leg) |
 | CAN2 | FDCAN2 (on-chip, classic mode) | 4× hip pitch / thigh |
 | CAN3 | FDCAN3 (on-chip, classic mode) | 4× knee |
-| CAN4 | MCP2518FD over SPI — **footprint only, not populated in v1** | reserved |
 
 Bus load: a classic 8-byte frame at 1 Mbps takes roughly 130 µs (estimate
 incl. bit stuffing). Per bus, 4 motors × 2 frames = 8 frames per cycle.
@@ -45,8 +43,8 @@ incl. bit stuffing). Per bus, 4 motors × 2 frames = 8 frames per cycle.
 | 500 Hz | ≈ 52 % |
 | 1 kHz | ≈ 104 % (impossible) |
 
-Target control rate: **500 Hz**. Reaching 1 kHz requires populating CAN4
-and switching to one bus per leg (3 motors/bus, ≈ 78 % at 1 kHz).
+Target control rate: **500 Hz**. This is enough because the AK80-8 runs
+the PD loop internally in MIT mode; the bus only updates the targets.
 
 Wiring: each bus is a daisy chain through its 4 motors (no star/stub
 topology), with a 120 Ω termination at both ends (board end on this PCB,

@@ -22,7 +22,6 @@ Jetson Orin Nano
 │  ├─ FDCAN1 ─ transceiver ─────────────────────┼─► 4× hip ab/ad (AK80-8)
 │  ├─ FDCAN2 ─ transceiver ─────────────────────┼─► 4× thigh
 │  ├─ FDCAN3 ─ transceiver ─────────────────────┼─► 4× knee
-│  ├─ SPI ─ MCP2518FD (not populated in v1) ────┼─► reserved
 │  ├─ SPI ─ IMU                                 │
 │  └─ GPIO ─ E-stop input                       │
 │ Power: battery → 5 V / 3.3 V                  │
