@@ -21,13 +21,13 @@ are powered from the battery directly, not through this board's regulators).
 
 12× CubeMars (T-Motor) AK80-8 KV30, 3 per leg.
 
-**Driver/protocol not confirmed.** The bus plan below assumes CubeMars MIT
-mode, but the current Laika-Software hardware interface uses the ODrive CAN
-protocol (torque control, more frames per motor per cycle).
+**Driver/protocol not confirmed.** The current Laika-Software hardware
+interface uses the ODrive CAN protocol (torque control).
 
 - Bus: **classic CAN, 1 Mbps**. Not CAN-FD — no FD frames may be sent on a
   bus with these motors. *(Verify against the AK80-8 manual.)*
-- Each control cycle: 1 command frame + 1 reply frame per motor.
+- Each control cycle: at least 1 command frame + 1 reply frame per motor
+  (exact count depends on the protocol).
 
 ## CAN bus plan
 
@@ -40,7 +40,8 @@ Grouped by joint type, 4 motors per bus:
 | CAN3 | FDCAN3 (on-chip, classic mode) | 4× knee |
 
 Bus load: a classic 8-byte frame at 1 Mbps takes roughly 130 µs (estimate
-incl. bit stuffing). Per bus, 4 motors × 2 frames = 8 frames per cycle.
+incl. bit stuffing). Per bus, assuming 2 frames per motor: 4 motors × 2 = 8
+frames per cycle.
 
 | Rate | Bus load (4 motors/bus) |
 |---|---|
