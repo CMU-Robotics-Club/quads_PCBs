@@ -35,11 +35,17 @@ straight from the battery.
 runs its controllers at
 [`update_rate: 1000`](https://github.com/CMU-Robotics-Club/Laika-Software/blob/dd9dcf645790c05628127b254bd854ea58fc05dc/laika_ws/src/laika_pid_controller/config/real_leg_pid_controller_config.yaml#L3).
 
-Every cycle, the host sends 3 frames to each motor:
+Every cycle, for each motor:
 
-1. [`Set_Input_Torque`](https://github.com/CMU-Robotics-Club/Laika-Software/blob/dd9dcf645790c05628127b254bd854ea58fc05dc/laika_ws/src/laika_hardware_interface/hardware/laika_hardware_interface.cpp#L287): the torque command
-2. [`Get_Torques`](https://github.com/CMU-Robotics-Club/Laika-Software/blob/dd9dcf645790c05628127b254bd854ea58fc05dc/laika_ws/src/laika_hardware_interface/hardware/laika_hardware_interface.cpp#L251): a request for torque data
-3. [`Get_Encoder_Estimates`](https://github.com/CMU-Robotics-Club/Laika-Software/blob/dd9dcf645790c05628127b254bd854ea58fc05dc/laika_ws/src/laika_hardware_interface/hardware/laika_hardware_interface.cpp#L252): a request for position and velocity
+- Host sends 3 frames:
+  [`Set_Input_Torque`](https://github.com/CMU-Robotics-Club/Laika-Software/blob/dd9dcf645790c05628127b254bd854ea58fc05dc/laika_ws/src/laika_hardware_interface/hardware/laika_hardware_interface.cpp#L287) (torque command),
+  [`Get_Torques`](https://github.com/CMU-Robotics-Club/Laika-Software/blob/dd9dcf645790c05628127b254bd854ea58fc05dc/laika_ws/src/laika_hardware_interface/hardware/laika_hardware_interface.cpp#L251) and
+  [`Get_Encoder_Estimates`](https://github.com/CMU-Robotics-Club/Laika-Software/blob/dd9dcf645790c05628127b254bd854ea58fc05dc/laika_ws/src/laika_hardware_interface/hardware/laika_hardware_interface.cpp#L252) (requests)
+- Host receives 2 replies: torque, and position/velocity
+  ([code](https://github.com/CMU-Robotics-Club/Laika-Software/blob/dd9dcf645790c05628127b254bd854ea58fc05dc/laika_ws/src/laika_hardware_interface/hardware/laika_hardware_interface.cpp#L383-L396))
+
+The ODrive also sends `Heartbeat` frames ([code](https://github.com/CMU-Robotics-Club/Laika-Software/blob/dd9dcf645790c05628127b254bd854ea58fc05dc/laika_ws/src/laika_hardware_interface/hardware/laika_hardware_interface.cpp#L393)) at a rate set in
+the ODrive config.
 
 ## CAN bus plan
 
