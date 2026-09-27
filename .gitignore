@@ -1,0 +1,21 @@
+# KiCad backups and caches
+*-backups/
+*.bak
+*.bck
+*.kicad_prl
+*.kicad_sch-bak
+*.kicad_pcb-bak
+*-cache.lib
+*.lck
+fp-info-cache
+_autosave-*
+\#auto_saved_files\#
+
+# Fabrication outputs (regenerate from source; attach to releases instead)
+gerbers/
+fab/
+*.zip
+
+# OS / editor
+.DS_Store
+*.swp
