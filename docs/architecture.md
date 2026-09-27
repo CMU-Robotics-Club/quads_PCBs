@@ -41,12 +41,8 @@ Grouped by joint type, 4 motors per bus:
 
 Bus load: a classic 8-byte frame at 1 Mbps takes roughly 130 µs (estimate
 incl. bit stuffing). Per bus, assuming 2 frames per motor: 4 motors × 2 = 8
-frames per cycle.
-
-| Rate | Bus load (4 motors/bus) |
-|---|---|
-| 500 Hz | ≈ 52 % |
-| 1 kHz | ≈ 104 % (impossible) |
+frames per cycle, ≈ 1.04 ms. At 1 kHz (1 ms per cycle) that is ≈ 104 % bus
+load, so it does not fit.
 
 Target control rate: **1 kHz**. Laika-Software runs its controllers at
 `update_rate: 1000` with the PID loop on the host, sending torque commands
