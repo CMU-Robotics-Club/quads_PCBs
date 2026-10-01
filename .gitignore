@@ -18,4 +18,5 @@ fab/
 
 # OS / editor
 .DS_Store
+.history
 *.swp
