@@ -9240,12 +9240,6 @@
 		(uuid "500996f6-d3d0-4f23-b606-d0b7344dfeb8")
 	)
 	(junction
-		(at 260.35 81.28)
-		(diameter 0)
-		(color 0 0 0 0)
-		(uuid "561a9be1-06fe-4436-a4ec-7d65b479fd93")
-	)
-	(junction
 		(at 161.29 71.12)
 		(diameter 0)
 		(color 0 0 0 0)
@@ -9274,12 +9268,6 @@
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "608e76f2-280d-4a7d-9ba2-79ffcb6e47cd")
-	)
-	(junction
-		(at 186.69 81.28)
-		(diameter 0)
-		(color 0 0 0 0)
-		(uuid "68b8bb6c-ff21-4fc1-9674-fff27cff1b18")
 	)
 	(junction
 		(at 288.29 41.91)
@@ -9462,12 +9450,6 @@
 		(uuid "b2511dc2-a91c-4ae1-9115-21f6e4efecc8")
 	)
 	(junction
-		(at 209.55 119.38)
-		(diameter 0)
-		(color 0 0 0 0)
-		(uuid "b3f78e66-a45d-417b-90fc-2da708d375b2")
-	)
-	(junction
 		(at 314.96 198.12)
 		(diameter 0)
 		(color 0 0 0 0)
@@ -9490,12 +9472,6 @@
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "bc07d72f-d7b5-4d3e-b06d-5a8483daa37b")
-	)
-	(junction
-		(at 210.82 119.38)
-		(diameter 0)
-		(color 0 0 0 0)
-		(uuid "c2e47589-d71e-49e6-a41b-082a9e78d022")
 	)
 	(junction
 		(at 57.15 160.02)
@@ -9630,6 +9606,12 @@
 		(uuid "fcd07b3f-8cf6-46fd-ab05-b96d0923e862")
 	)
 	(junction
+		(at 260.35 81.28)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "fcdd3736-443c-47a0-9870-f6ace4568e10")
+	)
+	(junction
 		(at 265.43 167.64)
 		(diameter 0)
 		(color 0 0 0 0)
@@ -9694,16 +9676,6 @@
 			(type default)
 		)
 		(uuid "0b9abbd9-1104-4394-855f-744a72fcb9b0")
-	)
-	(wire
-		(pts
-			(xy 186.69 81.28) (xy 260.35 81.28)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "0bdb1bf1-9487-4655-91ac-3a7c1bdf091c")
 	)
 	(wire
 		(pts
@@ -10027,6 +9999,16 @@
 	)
 	(wire
 		(pts
+			(xy 186.69 81.28) (xy 260.35 81.28)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "209f53b6-a0c6-4fb3-96ae-275b2d4be240")
+	)
+	(wire
+		(pts
 			(xy 227.33 175.26) (xy 240.03 175.26)
 		)
 		(stroke
@@ -10297,7 +10279,7 @@
 	)
 	(wire
 		(pts
-			(xy 209.55 119.38) (xy 210.82 119.38)
+			(xy 201.93 119.38) (xy 218.44 119.38)
 		)
 		(stroke
 			(width 0)
@@ -10394,6 +10376,16 @@
 			(type default)
 		)
 		(uuid "442b1dd3-348b-4d7c-9977-08c8754ace40")
+	)
+	(wire
+		(pts
+			(xy 209.55 43.18) (xy 209.55 121.92)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "458eeeea-97c2-4131-b080-f20ea39a34b3")
 	)
 	(wire
 		(pts
@@ -10544,16 +10536,6 @@
 			(type default)
 		)
 		(uuid "4f815419-ed73-41be-b0b6-e8cf6043ebce")
-	)
-	(wire
-		(pts
-			(xy 209.55 43.18) (xy 209.55 119.38)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "513fb7ff-0878-4619-b173-88a7452a9545")
 	)
 	(wire
 		(pts
@@ -11217,16 +11199,6 @@
 	)
 	(wire
 		(pts
-			(xy 210.82 119.38) (xy 210.82 121.92)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "80f29813-bc1e-48bc-b68b-fc0d613cab2d")
-	)
-	(wire
-		(pts
 			(xy 240.03 203.2) (xy 238.76 203.2)
 		)
 		(stroke
@@ -11717,16 +11689,6 @@
 	)
 	(wire
 		(pts
-			(xy 201.93 119.38) (xy 209.55 119.38)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "a7161e4d-7f5d-4c32-87ae-9f73a9dd8724")
-	)
-	(wire
-		(pts
 			(xy 151.13 67.31) (xy 151.13 71.12)
 		)
 		(stroke
@@ -11977,16 +11939,6 @@
 	)
 	(wire
 		(pts
-			(xy 184.15 81.28) (xy 186.69 81.28)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "b1d7e7ca-7941-4737-8f99-dd43409e9700")
-	)
-	(wire
-		(pts
 			(xy 246.38 143.51) (xy 248.92 143.51)
 		)
 		(stroke
@@ -12004,16 +11956,6 @@
 			(type default)
 		)
 		(uuid "b3f43315-099b-4f2f-b094-d424cfc5f178")
-	)
-	(wire
-		(pts
-			(xy 210.82 119.38) (xy 218.44 119.38)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "b44e913b-9039-4d8a-9557-04b4874a5665")
 	)
 	(wire
 		(pts
@@ -12747,7 +12689,7 @@
 	)
 	(wire
 		(pts
-			(xy 210.82 121.92) (xy 218.44 121.92)
+			(xy 209.55 121.92) (xy 218.44 121.92)
 		)
 		(stroke
 			(width 0)
@@ -12985,7 +12927,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" "Diode_SMD:Nexperia_DSN1608-2_1.6x0.8mm"
+		(property "Footprint" ""
 			(at 224.79 193.04 0)
 			(hide yes)
 			(show_name no)
@@ -13542,7 +13484,7 @@
 				(justify right)
 			)
 		)
-		(property "Footprint" "Diode_SMD:D_SMA"
+		(property "Footprint" ""
 			(at 284.48 171.45 0)
 			(hide yes)
 			(show_name no)
@@ -13703,7 +13645,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" "Diode_SMD:Nexperia_DSN1608-2_1.6x0.8mm"
+		(property "Footprint" ""
 			(at 91.44 167.64 0)
 			(hide yes)
 			(show_name no)
@@ -14608,7 +14550,7 @@
 				)
 			)
 		)
-		(property "Footprint" "Diode_SMD:D_SMF"
+		(property "Footprint" ""
 			(at 31.75 144.78 0)
 			(hide yes)
 			(show_name no)
@@ -14770,7 +14712,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" "Diode_SMD:Nexperia_DSN1608-2_1.6x0.8mm"
+		(property "Footprint" ""
 			(at 288.29 195.58 0)
 			(hide yes)
 			(show_name no)
@@ -15013,7 +14955,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" "Diode_SMD:Nexperia_DSN1608-2_1.6x0.8mm"
+		(property "Footprint" ""
 			(at 240.03 172.72 0)
 			(hide yes)
 			(show_name no)
@@ -15173,7 +15115,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" "Diode_SMD:Nexperia_DSN1608-2_1.6x0.8mm"
+		(property "Footprint" ""
 			(at 278.13 39.37 0)
 			(hide yes)
 			(show_name no)
@@ -15333,7 +15275,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" "Diode_SMD:Nexperia_DSN1608-2_1.6x0.8mm"
+		(property "Footprint" ""
 			(at 265.43 171.45 0)
 			(hide yes)
 			(show_name no)
@@ -15656,7 +15598,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" "Package_SO:SOIC-20W_7.5x12.8mm_P1.27mm"
+		(property "Footprint" ""
 			(at 308.61 54.61 0)
 			(hide yes)
 			(show_name no)
@@ -16354,7 +16296,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" "Diode_SMD:Nexperia_DSN1608-2_1.6x0.8mm"
+		(property "Footprint" ""
 			(at 78.74 170.18 0)
 			(hide yes)
 			(show_name no)
@@ -16513,7 +16455,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" "Diode_SMD:Nexperia_DSN1608-2_1.6x0.8mm"
+		(property "Footprint" ""
 			(at 234.95 172.72 0)
 			(hide yes)
 			(show_name no)
@@ -17203,7 +17145,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" "Diode_SMD:Nexperia_DSN1608-2_1.6x0.8mm"
+		(property "Footprint" ""
 			(at 318.77 203.2 0)
 			(hide yes)
 			(show_name no)
@@ -17601,7 +17543,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" "Diode_SMD:Nexperia_DSN1608-2_1.6x0.8mm"
+		(property "Footprint" ""
 			(at 318.77 198.12 0)
 			(hide yes)
 			(show_name no)
@@ -17777,7 +17719,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" "Diode_SMD:Nexperia_DSN1608-2_1.6x0.8mm"
+		(property "Footprint" ""
 			(at 82.55 170.18 0)
 			(hide yes)
 			(show_name no)
@@ -18020,7 +17962,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" "Diode_SMD:Nexperia_DSN1608-2_1.6x0.8mm"
+		(property "Footprint" ""
 			(at 287.02 36.83 0)
 			(hide yes)
 			(show_name no)
@@ -18102,7 +18044,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" "Diode_SMD:Nexperia_DSN1608-2_1.6x0.8mm"
+		(property "Footprint" ""
 			(at 242.57 203.2 0)
 			(hide yes)
 			(show_name no)
@@ -18423,7 +18365,7 @@
 				)
 			)
 		)
-		(property "Footprint" "Connector:Tag-Connect_TC2030-IDC-FP_2x03_P1.27mm_Vertical"
+		(property "Footprint" ""
 			(at 297.18 175.26 0)
 			(hide yes)
 			(show_name no)
@@ -18909,7 +18851,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" "Diode_SMD:Nexperia_DSN1608-2_1.6x0.8mm"
+		(property "Footprint" ""
 			(at 308.61 41.91 0)
 			(hide yes)
 			(show_name no)
@@ -19479,7 +19421,7 @@
 				(justify right)
 			)
 		)
-		(property "Footprint" "Diode_SMD:D_SMA"
+		(property "Footprint" ""
 			(at 234.95 171.45 0)
 			(hide yes)
 			(show_name no)
@@ -19561,7 +19503,7 @@
 				(justify right)
 			)
 		)
-		(property "Footprint" "Diode_SMD:D_SMF"
+		(property "Footprint" ""
 			(at 265.43 218.44 0)
 			(hide yes)
 			(show_name no)
@@ -19890,7 +19832,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" "Diode_SMD:Nexperia_DSN1608-2_1.6x0.8mm"
+		(property "Footprint" ""
 			(at 309.88 195.58 0)
 			(hide yes)
 			(show_name no)
@@ -19972,7 +19914,7 @@
 				(justify right)
 			)
 		)
-		(property "Footprint" "Diode_SMD:D_SMF"
+		(property "Footprint" ""
 			(at 347.98 218.44 0)
 			(hide yes)
 			(show_name no)
@@ -20532,7 +20474,7 @@
 				)
 			)
 		)
-		(property "Footprint" "Button_Switch_SMD:Nidec_Copal_CAS-120A"
+		(property "Footprint" "Button_Switch_SMD:SW_Push_1P1T_NO_E-Switch_TL3301NxxxxxG"
 			(at 99.06 86.36 0)
 			(hide yes)
 			(show_name no)
@@ -21333,7 +21275,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" "Diode_SMD:Nexperia_DSN1608-2_1.6x0.8mm"
+		(property "Footprint" ""
 			(at 210.82 172.72 0)
 			(hide yes)
 			(show_name no)
@@ -22003,7 +21945,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" "Diode_SMD:Nexperia_DSN1608-2_1.6x0.8mm"
+		(property "Footprint" ""
 			(at 60.96 160.02 0)
 			(hide yes)
 			(show_name no)
@@ -23033,7 +22975,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" "Diode_SMD:Nexperia_DSN1608-2_1.6x0.8mm"
+		(property "Footprint" ""
 			(at 242.57 198.12 0)
 			(hide yes)
 			(show_name no)
@@ -23520,7 +23462,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" "Package_SO:SOIC-20W_7.5x12.8mm_P1.27mm"
+		(property "Footprint" ""
 			(at 60.96 152.4 0)
 			(hide yes)
 			(show_name no)
@@ -23679,7 +23621,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" "Diode_SMD:Nexperia_DSN1608-2_1.6x0.8mm"
+		(property "Footprint" ""
 			(at 233.68 195.58 0)
 			(hide yes)
 			(show_name no)
@@ -23827,7 +23769,7 @@
 			)
 		)
 		(property "Value" "+3V3"
-			(at 271.272 82.042 0)
+			(at 271.78 82.804 90)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -24154,7 +24096,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" "Diode_SMD:Nexperia_DSN1608-2_1.6x0.8mm"
+		(property "Footprint" ""
 			(at 297.18 193.04 0)
 			(hide yes)
 			(show_name no)
@@ -24425,7 +24367,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" "Package_SO:SOIC-20W_7.5x12.8mm_P1.27mm"
+		(property "Footprint" ""
 			(at 318.77 210.82 0)
 			(hide yes)
 			(show_name no)
@@ -25036,7 +24978,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" "Diode_SMD:Nexperia_DSN1608-2_1.6x0.8mm"
+		(property "Footprint" ""
 			(at 300.99 193.04 0)
 			(hide yes)
 			(show_name no)
@@ -25118,7 +25060,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" "Diode_SMD:Nexperia_DSN1608-2_1.6x0.8mm"
+		(property "Footprint" ""
 			(at 69.85 167.64 0)
 			(hide yes)
 			(show_name no)
@@ -25200,7 +25142,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" "Diode_SMD:Nexperia_DSN1608-2_1.6x0.8mm"
+		(property "Footprint" ""
 			(at 308.61 46.99 0)
 			(hide yes)
 			(show_name no)
@@ -25918,7 +25860,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" "Diode_SMD:Nexperia_DSN1608-2_1.6x0.8mm"
+		(property "Footprint" ""
 			(at 299.72 39.37 0)
 			(hide yes)
 			(show_name no)
@@ -26202,7 +26144,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" "Diode_SMD:Nexperia_DSN1608-2_1.6x0.8mm"
+		(property "Footprint" ""
 			(at 60.96 165.1 0)
 			(hide yes)
 			(show_name no)
@@ -26284,7 +26226,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" "Package_SO:SOIC-20W_7.5x12.8mm_P1.27mm"
+		(property "Footprint" ""
 			(at 242.57 210.82 0)
 			(hide yes)
 			(show_name no)
@@ -26366,7 +26308,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" "Diode_SMD:Nexperia_DSN1608-2_1.6x0.8mm"
+		(property "Footprint" ""
 			(at 290.83 36.83 0)
 			(hide yes)
 			(show_name no)
@@ -26683,7 +26625,7 @@
 				(justify right)
 			)
 		)
-		(property "Footprint" "Diode_SMD:D_SMF"
+		(property "Footprint" ""
 			(at 337.82 62.23 0)
 			(hide yes)
 			(show_name no)
@@ -27326,7 +27268,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" "Diode_SMD:Nexperia_DSN1608-2_1.6x0.8mm"
+		(property "Footprint" ""
 			(at 220.98 193.04 0)
 			(hide yes)
 			(show_name no)
@@ -28268,7 +28210,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" "Diode_SMD:Nexperia_DSN1608-2_1.6x0.8mm"
+		(property "Footprint" ""
 			(at 212.09 195.58 0)
 			(hide yes)
 			(show_name no)
