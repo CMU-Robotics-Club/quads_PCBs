@@ -3,29 +3,10 @@
 PCB designs for Laika, the CMU Robotics Club quadruped. Software lives in
 [Laika-Software](https://github.com/CMU-Robotics-Club/Laika-Software).
 
+Firmware lives in [quads_firmware](https://github.com/CMU-Robotics-Club/quads_firmware/tree/main). This repo might move to there into a subfolder
+
 EDA tool: **KiCad**.
-
-## Boards
-
-| Board | Status | Purpose |
-|---|---|---|
-| `mainboard` | Planning | STM32H723 bridge between the Jetson and the 12 leg motors |
 
 ## System overview
 
-```
-Jetson Orin Nano
-      │ USB
-      ▼
-┌──────────── mainboard (this repo) ────────────┐
-│ STM32H723                                     │
-│  ├─ FDCAN1 ─ transceiver ─────────────────────┼─► 4× hip ab/ad (AK80-8)
-│  ├─ FDCAN2 ─ transceiver ─────────────────────┼─► 4× thigh
-│  ├─ FDCAN3 ─ transceiver ─────────────────────┼─► 4× knee
-│  ├─ SPI ─ IMU                                 │
-│  └─ GPIO ─ E-stop input                       │
-│ Power: battery → 5 V / 3.3 V                  │
-└───────────────────────────────────────────────┘
-```
-
-See [docs/architecture.md](docs/architecture.md) for the interface spec.
+TODO
