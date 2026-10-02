@@ -186,7 +186,7 @@
 			)
 			(embedded_fonts no)
 		)
-		(symbol "Connector:Conn_01x03_Pin"
+		(symbol "Connector:Conn_01x04_Pin"
 			(pin_names
 				(offset 1.016)
 				(hide yes)
@@ -206,8 +206,8 @@
 					)
 				)
 			)
-			(property "Value" "Conn_01x03_Pin"
-				(at 0 -5.08 0)
+			(property "Value" "Conn_01x04_Pin"
+				(at 0 -7.62 0)
 				(show_name no)
 				(do_not_autoplace no)
 				(effects
@@ -238,7 +238,7 @@
 					)
 				)
 			)
-			(property "Description" "Generic connector, single row, 01x03, script generated"
+			(property "Description" "Generic connector, single row, 01x04, script generated"
 				(at 0 0 0)
 				(show_name no)
 				(do_not_autoplace no)
@@ -281,7 +281,7 @@
 					)
 				)
 			)
-			(symbol "Conn_01x03_Pin_1_1"
+			(symbol "Conn_01x04_Pin_1_1"
 				(rectangle
 					(start 0.8636 2.667)
 					(end 0 2.413)
@@ -307,6 +307,17 @@
 				(rectangle
 					(start 0.8636 -2.413)
 					(end 0 -2.667)
+					(stroke
+						(width 0.1524)
+						(type default)
+					)
+					(fill
+						(type outline)
+					)
+				)
+				(rectangle
+					(start 0.8636 -4.953)
+					(end 0 -5.207)
 					(stroke
 						(width 0.1524)
 						(type default)
@@ -342,6 +353,18 @@
 				(polyline
 					(pts
 						(xy 1.27 -2.54) (xy 0.8636 -2.54)
+					)
+					(stroke
+						(width 0.1524)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 1.27 -5.08) (xy 0.8636 -5.08)
 					)
 					(stroke
 						(width 0.1524)
@@ -398,6 +421,24 @@
 						)
 					)
 					(number "3"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin passive line
+					(at 5.08 -5.08 180)
+					(length 3.81)
+					(name "Pin_4"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "4"
 						(effects
 							(font
 								(size 1.27 1.27)
@@ -15563,8 +15604,9 @@
 		)
 	)
 	(symbol
-		(lib_id "Connector:Conn_01x03_Pin")
-		(at 31.75 160.02 0)
+		(lib_id "Connector:Conn_01x04_Pin")
+		(at 31.75 162.56 0)
+		(mirror x)
 		(unit 1)
 		(body_style 1)
 		(exclude_from_sim no)
@@ -15584,7 +15626,7 @@
 				)
 			)
 		)
-		(property "Value" "Conn_01x03_Pin"
+		(property "Value" "Conn_01x04_Pin"
 			(at 32.385 154.94 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -15594,7 +15636,7 @@
 				)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Connector_JST:JST_GH_SM04B-GHS-TB_1x04-1MP_P1.25mm_Horizontal"
 			(at 31.75 160.02 0)
 			(hide yes)
 			(show_name no)
@@ -15627,11 +15669,25 @@
 				)
 			)
 		)
+		(property "LCSC" "C189895"
+			(at 31.75 162.56 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
 		(pin "1"
 			(uuid "7639de83-4947-42ed-9540-97a70d636f91")
 		)
 		(pin "3"
 			(uuid "8c62d620-5cbf-490d-b5bc-1ab2bb8fd214")
+		)
+		(pin "4"
+			(uuid "b6c54b2b-a2e8-48bd-8425-bfb0c647c6a8")
 		)
 		(pin "2"
 			(uuid "d869e9c6-9e08-4761-a1d4-067eea8e7fb2")
@@ -21078,8 +21134,9 @@
 		)
 	)
 	(symbol
-		(lib_id "Connector:Conn_01x03_Pin")
-		(at 265.43 218.44 180)
+		(lib_id "Connector:Conn_01x04_Pin")
+		(at 265.43 215.9 0)
+		(mirror y)
 		(unit 1)
 		(body_style 1)
 		(exclude_from_sim no)
@@ -21100,7 +21157,7 @@
 				(justify right)
 			)
 		)
-		(property "Value" "Conn_01x03_Pin"
+		(property "Value" "Conn_01x04_Pin"
 			(at 266.7 219.7099 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -21111,7 +21168,7 @@
 				(justify right)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Connector_JST:JST_GH_SM04B-GHS-TB_1x04-1MP_P1.25mm_Horizontal"
 			(at 265.43 218.44 0)
 			(hide yes)
 			(show_name no)
@@ -21144,11 +21201,25 @@
 				)
 			)
 		)
+		(property "LCSC" "C189895"
+			(at 265.43 215.9 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
 		(pin "1"
 			(uuid "6488ef3b-1397-4075-9676-74768669b5ee")
 		)
 		(pin "3"
 			(uuid "bf4238b2-7529-4bab-8098-4bb112a7dc47")
+		)
+		(pin "4"
+			(uuid "b9c93a57-e3fd-412b-b424-85c778e427b4")
 		)
 		(pin "2"
 			(uuid "252d065d-bd9c-4fc4-8d92-d682d0de6d5d")
@@ -21522,8 +21593,9 @@
 		)
 	)
 	(symbol
-		(lib_id "Connector:Conn_01x03_Pin")
-		(at 347.98 218.44 180)
+		(lib_id "Connector:Conn_01x04_Pin")
+		(at 347.98 215.9 0)
+		(mirror y)
 		(unit 1)
 		(body_style 1)
 		(exclude_from_sim no)
@@ -21544,7 +21616,7 @@
 				(justify right)
 			)
 		)
-		(property "Value" "Conn_01x03_Pin"
+		(property "Value" "Conn_01x04_Pin"
 			(at 349.25 219.7099 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -21555,7 +21627,7 @@
 				(justify right)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Connector_JST:JST_GH_SM04B-GHS-TB_1x04-1MP_P1.25mm_Horizontal"
 			(at 347.98 218.44 0)
 			(hide yes)
 			(show_name no)
@@ -21588,11 +21660,25 @@
 				)
 			)
 		)
+		(property "LCSC" "C189895"
+			(at 347.98 215.9 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
 		(pin "1"
 			(uuid "1217e916-c1f5-46b8-bca5-3d986515f148")
 		)
 		(pin "3"
 			(uuid "156f4152-5172-4064-a407-5c06b620270c")
+		)
+		(pin "4"
+			(uuid "12a8d462-102c-4495-a0a0-47e74392b0bf")
 		)
 		(pin "2"
 			(uuid "d7d8c197-9b20-48cf-9aa1-9b0f8979b55d")
@@ -28919,8 +29005,9 @@
 		)
 	)
 	(symbol
-		(lib_id "Connector:Conn_01x03_Pin")
-		(at 337.82 62.23 180)
+		(lib_id "Connector:Conn_01x04_Pin")
+		(at 337.82 59.69 0)
+		(mirror y)
 		(unit 1)
 		(body_style 1)
 		(exclude_from_sim no)
@@ -28941,7 +29028,7 @@
 				(justify right)
 			)
 		)
-		(property "Value" "Conn_01x03_Pin"
+		(property "Value" "Conn_01x04_Pin"
 			(at 339.09 63.4999 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -28952,7 +29039,7 @@
 				(justify right)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Connector_JST:JST_GH_SM04B-GHS-TB_1x04-1MP_P1.25mm_Horizontal"
 			(at 337.82 62.23 0)
 			(hide yes)
 			(show_name no)
@@ -28985,11 +29072,25 @@
 				)
 			)
 		)
+		(property "LCSC" "C189895"
+			(at 337.82 59.69 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
 		(pin "1"
 			(uuid "233b0bf7-cdf6-4672-bfab-ec2cf6033690")
 		)
 		(pin "3"
 			(uuid "244b2ee8-b979-41f4-9e4b-8eaff86a1477")
+		)
+		(pin "4"
+			(uuid "ed007b36-846e-422c-851d-ecb520d65f21")
 		)
 		(pin "2"
 			(uuid "d69b1076-80e8-4aee-b7d5-a7ea797b638c")
@@ -31961,6 +32062,22 @@
 				)
 			)
 		)
+	)
+	(no_connect
+		(at 332.74 57.15)
+		(uuid "6f4832a3-2038-46b7-8632-a220779060e9")
+	)
+	(no_connect
+		(at 342.9 213.36)
+		(uuid "34d7f4bd-002b-495e-a989-b4cc08c34632")
+	)
+	(no_connect
+		(at 260.35 213.36)
+		(uuid "5bdad4fe-6253-4121-8087-0538d83b50cf")
+	)
+	(no_connect
+		(at 36.83 165.1)
+		(uuid "1687a9be-ee11-4ac2-bb81-5e47b85e1c5c")
 	)
 	(sheet_instances
 		(path "/"
