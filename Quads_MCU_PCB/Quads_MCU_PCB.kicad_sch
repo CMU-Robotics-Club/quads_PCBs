@@ -22015,7 +22015,7 @@
 				)
 			)
 		)
-		(property "Value" "68k"
+		(property "Value" "10k"
 			(at 228.346 148.59 90)
 			(show_name no)
 			(do_not_autoplace no)
@@ -25373,7 +25373,7 @@
 				)
 			)
 		)
-		(property "Value" "100k"
+		(property "Value" "4.7k"
 			(at 241.046 148.59 90)
 			(show_name no)
 			(do_not_autoplace no)
