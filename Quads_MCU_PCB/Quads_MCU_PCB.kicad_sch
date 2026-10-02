@@ -8951,16 +8951,6 @@
 		)
 		(uuid "4732e329-a2fb-44b2-9593-ca8275c22311")
 	)
-	(text "Note: In/out could be useful for spi tx/rx"
-		(exclude_from_sim no)
-		(at 236.22 217.678 0)
-		(effects
-			(font
-				(size 0.508 0.508)
-			)
-		)
-		(uuid "484692fc-3c34-4b59-adc5-26b68074c6a4")
-	)
 	(text "CAN Gnd"
 		(exclude_from_sim no)
 		(at 258.572 221.996 0)
