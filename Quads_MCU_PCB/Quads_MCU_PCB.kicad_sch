@@ -19078,7 +19078,7 @@
 				(justify right)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Connector_PinHeader_2.54mm:PinHeader_1x06_P2.54mm_Vertical"
 			(at 223.52 121.92 0)
 			(hide yes)
 			(show_name no)
@@ -19102,6 +19102,17 @@
 		)
 		(property "Description" "Generic connector, single row, 01x06, script generated"
 			(at 223.52 121.92 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "LCSC" "C492405"
+			(at 223.52 121.92 180)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -19963,7 +19974,7 @@
 				)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Connector_Molex:Molex_Micro-Fit_3.0_43045-0212_2x01_P3.00mm_Vertical"
 			(at 297.18 175.26 0)
 			(hide yes)
 			(show_name no)
@@ -19987,6 +19998,17 @@
 		)
 		(property "Description" "Generic connector, single row, 01x02, script generated"
 			(at 297.18 175.26 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "LCSC" "C293362"
+			(at 297.18 175.26 180)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
