@@ -7653,6 +7653,17 @@
 				(xyz 0 0 0)
 			)
 		)
+		(model "${KIPRJMOD}/3d_models/USB_C_Receptacle_HRO_TYPE-C-31-M-12.step"
+			(offset
+				(xyz -4.5 -3.6 0)
+			)
+			(scale
+				(xyz 1 1 1)
+			)
+			(rotate
+				(xyz -90 -0 -0)
+			)
+		)
 	)
 	(footprint "Capacitor_SMD:C_0402_1005Metric"
 		(layer "F.Cu")
