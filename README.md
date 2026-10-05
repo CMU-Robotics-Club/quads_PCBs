@@ -7,6 +7,10 @@ Firmware lives in [quads_firmware](https://github.com/CMU-Robotics-Club/quads_fi
 
 EDA tool: **KiCad**.
 
+> [!IMPORTANT]
+> Run `git lfs lock Quads_MCU_PCB/*` when you want to edit the pcb, make your changes and push them, and then run `git lfs unlock Quads_MCU_PCB/*`. 
+> This ensures that only 1 person can edit the pcb at a time. 
+
 ## System overview
 
 TODO
