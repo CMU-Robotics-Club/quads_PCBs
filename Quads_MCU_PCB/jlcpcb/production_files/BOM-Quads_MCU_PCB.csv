@@ -19,7 +19,7 @@ Comment,Designator,Footprint,LCSC,Quantity
 ADM3057ExRW,"U3,U6,U7,U9",SOIC-20W_7.5x12.8mm_P1.27mm,C658109,4
 AP7361C-33E,U5,SOT-223-3_TabPin2,C500795,1
 BMI088,U10,Bosch_LGA-16_4.5x3mm_P0.5mm_LayoutBorder7x1y_ClockwisePinNumbering,C194919,1
-Conn_01x02_Pin,J3,Molex_Micro-Fit_3.0_43650-0200_1x02_P3.00mm_Horizontal,C293362,1
+Conn_01x02_Pin,J3,Molex_Micro-Fit_3.0_43650-0200_1x02_P3.00mm_Horizontal,C192562,1
 Conn_01x04_Pin,"J4,J5,J6,J7",JST_GH_SM04B-GHS-TB_1x04-1MP_P1.25mm_Horizontal,C189895,4
 Conn_01x06_Pin,"J2,J8",PinHeader_1x06_P2.54mm_Vertical,C492405,2
 D_Schottky,D2,D_SMA,C8678,1
